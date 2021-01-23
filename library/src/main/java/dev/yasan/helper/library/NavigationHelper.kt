@@ -2,7 +2,6 @@ package dev.yasan.helper.library
 
 import android.content.Context
 import android.content.Intent
-import androidx.core.content.ContextCompat.startActivity
 
 object NavigationHelper {
 
