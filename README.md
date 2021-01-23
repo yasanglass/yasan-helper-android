@@ -7,7 +7,7 @@ A simple Android library with useful [Kotlin extension] functions to help you wr
 
 This library is available via JitPack, so getting it as simple as adding it as a dependency, like this:
 
-1. Add JitPack repository to your root `build.gradle` file
+1. Add JitPack repository to your project `build.gradle` file:
 ```gradle
 allprojects {
     repositories {
@@ -15,7 +15,7 @@ allprojects {
     }
 }
 ```
-2. Add the dependency in your project `build.gradle` file
+2. Add the dependency to your module `build.gradle` file:
 ```gradle
 dependencies {
     implementation 'com.github.yasandev:yasan-helper-android:{latest version}'
