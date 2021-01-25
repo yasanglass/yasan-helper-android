@@ -7,7 +7,7 @@ import androidx.browser.customtabs.CustomTabsIntent
 
 object WebHelper {
 
-    val playStoreAppPrefix = "https://play.google.com/store/apps/details?id="
+    const val PLAY_STORE_APP_LINK_PREFIX = "https://play.google.com/store/apps/details?id="
 
     fun openWebView(context: Context, url: String?) {
         val builder: CustomTabsIntent.Builder = CustomTabsIntent.Builder()
@@ -21,7 +21,7 @@ object WebHelper {
     }
 
     fun openAppOnPlayStore(context: Context) {
-        val url = playStoreAppPrefix + context.packageName
+        val url = PLAY_STORE_APP_LINK_PREFIX + context.packageName
         val builder: CustomTabsIntent.Builder = CustomTabsIntent.Builder()
         val intent: CustomTabsIntent = builder.build()
         intent.intent.putExtra(
