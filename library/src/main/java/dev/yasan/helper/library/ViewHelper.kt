@@ -19,6 +19,10 @@ object ViewHelper {
         snack.show()
     }
 
+    fun visible(view: View) { view.visibility = View.VISIBLE }
+    fun invisible(view: View) { view.visibility = View.INVISIBLE }
+    fun gone(view: View) { view.visibility = View.GONE }
+
 }
 
 fun View.showSnackBar(message: String) =
@@ -32,3 +36,7 @@ fun View.showSnackBarOnTop(message: String) =
 
 fun String.showSnackBarOnTop(parent: View) =
     ViewHelper.showSnackBarOnTop(parent, this)
+
+fun View.visible() = ViewHelper.visible(this)
+fun View.invisible() = ViewHelper.invisible(this)
+fun View.gone() = ViewHelper.gone(this)
