@@ -8,13 +8,14 @@ import androidx.browser.customtabs.CustomTabsIntent
 object WebHelper {
 
     const val PLAY_STORE_APP_LINK_PREFIX = "https://play.google.com/store/apps/details?id="
+    private const val APP_REF_PREFIX = "android-app://"
 
     fun openWebView(context: Context, url: String?) {
         val builder: CustomTabsIntent.Builder = CustomTabsIntent.Builder()
         val intent: CustomTabsIntent = builder.build()
         intent.intent.putExtra(
             Intent.EXTRA_REFERRER,
-            Uri.parse("android-app://" + context.packageName)
+            Uri.parse(APP_REF_PREFIX + context.packageName)
         )
         intent.intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
         intent.launchUrl(context, Uri.parse(url))
@@ -26,7 +27,7 @@ object WebHelper {
         val intent: CustomTabsIntent = builder.build()
         intent.intent.putExtra(
             Intent.EXTRA_REFERRER,
-            Uri.parse("android-app://" + context.packageName)
+            Uri.parse(APP_REF_PREFIX + context.packageName)
         )
         intent.intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
         intent.launchUrl(context, Uri.parse(url))
