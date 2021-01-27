@@ -4,7 +4,6 @@
 A simple Android library with useful [Kotlin extension] functions to help you write less code.
 
 ## Including in your project
-
 This library is available via JitPack, so getting it as simple as adding it as a dependency, like this:
 
 1. Add JitPack repository to your project `build.gradle` file:
@@ -22,7 +21,7 @@ dependencies {
 }
 ```
 
-You can also use '-SNAPSHOT'.
+You can also use '-SNAPSHOT' to get the snapshot builds.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
