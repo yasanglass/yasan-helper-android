@@ -13,9 +13,6 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
-
-        compileReleaseKotlin.kotlinOptions.freeCompilerArgs += ["-module-name", "dev.yasan.helper.android"]
-
     }
 
     buildTypes {
