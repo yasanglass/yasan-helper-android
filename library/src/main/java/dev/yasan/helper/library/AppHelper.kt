@@ -55,3 +55,15 @@ fun String.toastLong(context: Context): String {
     AppHelper.toast(context, this, true)
     return this
 }
+
+fun Any.toast(context: Context): String {
+    val messageString = this.toString()
+    AppHelper.toast(context, messageString)
+    return messageString
+}
+
+fun Any.toastLong(context: Context): String {
+    val messageString = this.toString()
+    AppHelper.toast(context, messageString, true)
+    return messageString
+}
