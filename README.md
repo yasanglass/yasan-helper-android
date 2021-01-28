@@ -4,7 +4,7 @@
 A simple Android library with useful [Kotlin extension] functions to help you write less code.
 
 ## Usage
-*General app helper functions*
+**General app helper functions**
 
 ```kotlin
 String.isInteger(): Boolean // == if the string can be converted to interger 
@@ -25,14 +25,14 @@ Any.toastLong(context: Context): String
 You can also use these functions using `AppHelper` object
 
 ---
-*Navigation helper functions*
+**Navigation helper functions**
 ```kotlin
 Context.startIntentAndClearHistory(intent: Intent) // starts an activity and clears the history
 ```
 You can also use these functions using `NavigationHelper` object.
 
 ---
-*Resources helper functions*
+**Resources helper functions**
 
 ```kotlin
 Context.getColorWithContext(resourceId: Int): Int 
@@ -42,7 +42,7 @@ Context.getDrawableWithContext(resourceId: Int): Drawable?
 These functions use `ContextCompat` but you dont have to manually pass `Context`.
 
 ---
-*SharedPreferences helper functions*
+**SharedPreferences helper functions**
 ```kotlin
 Context.getMySharedPreferences(): SharedPreferences
 
@@ -51,7 +51,7 @@ Context.getMySharedPreferencesEditor(): SharedPreferences.Editor
 You can also use these functions using `SharedPreferencesHelper` object. 
 
 ---
-*View helper functions*
+**View helper functions**
 ```kotlin
 fun View.visible() = ViewHelper.visible(this) // == view.visibility = View.VISIBLE
 
