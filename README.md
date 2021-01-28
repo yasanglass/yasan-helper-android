@@ -33,7 +33,7 @@ You can also use these functions using `NavigationHelper` object.
 
 ---
 Resources helper functions
-You can also use these functions using `ResourcesHelper` object.
+
 ```kotlin
 Context.getColorWithContext(resourceId: Int): Int 
 
