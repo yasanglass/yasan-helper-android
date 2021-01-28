@@ -29,7 +29,7 @@ You can also use these functions using `AppHelper` object
 ```kotlin
 Context.startIntentAndClearHistory(intent: Intent) // starts an activity and clears the history
 ```
-You can also use these functions using `NavigationHelper` object.
+You can also use these functions using `NavigationHelper` object
 
 ---
 **Resources helper functions**
@@ -39,7 +39,7 @@ Context.getColorWithContext(resourceId: Int): Int
 
 Context.getDrawableWithContext(resourceId: Int): Drawable?
 ```
-These functions use `ContextCompat` but you dont have to manually pass `Context`.
+These functions use `ContextCompat` but you dont have to manually pass `Context`
 
 ---
 **SharedPreferences helper functions**
@@ -48,7 +48,7 @@ Context.getMySharedPreferences(): SharedPreferences
 
 Context.getMySharedPreferencesEditor(): SharedPreferences.Editor
 ```
-You can also use these functions using `SharedPreferencesHelper` object. 
+You can also use these functions using `SharedPreferencesHelper` object
 
 ---
 **View helper functions**
@@ -67,8 +67,19 @@ fun View.showSnackBarOnTop(message: String)
 
 fun String.showSnackBarOnTop(parent: View)
 ```
-You can also use these functions using `ViewHelper` object. 
+You can also use these functions using `ViewHelper` object
 
+---
+**Web helper functions**
+The function below opens the url in a webview
+```kotlin
+WebHelper.openWebView(context: Context, url: String?) 
+```
+The function below opens your app's page on Google Play Store
+```kotlin
+WebHelper.openAppOnPlayStore(context: Context) 
+```
+The function above also set your app's package name as the referrer
 ---
 
 ## Including in your project
@@ -89,10 +100,14 @@ dependencies {
 }
 ```
 
-You can also use '-SNAPSHOT' to get the snapshot builds.
+You can also use 'main-SNAPSHOT' to get the snapshot builds.
+
+---
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+---
 
 ## License
 [GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.txt)
