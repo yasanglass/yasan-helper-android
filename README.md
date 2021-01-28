@@ -35,9 +35,18 @@ ResourcesHelper.kt == *Resources helper functions*
 
 You can also use these functions using `ResourcesHelper` object. These functions use `ContextCompat` but you dont have to manually pass `Context`.
 ```kotlin
-fun Context.getColorWithContext(resourceId: Int): Int 
+Context.getColorWithContext(resourceId: Int): Int 
 
-fun Context.getDrawableWithContext(resourceId: Int): Drawable?
+Context.getDrawableWithContext(resourceId: Int): Drawable?
+```
+
+SharedPreferencesHelper.kt == *SharedPreferences helper functions*
+
+You can also use these functions using `SharedPreferencesHelper` object. 
+```kotlin
+Context.getMySharedPreferences(): SharedPreferences
+
+Context.getMySharedPreferencesEditor(): SharedPreferences.Editor
 ```
 
 ## Including in your project
