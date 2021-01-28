@@ -7,7 +7,7 @@ A simple Android library with useful [Kotlin extension] functions to help you wr
 **General app helper functions**
 
 ```kotlin
-String.isInteger(): Boolean // == if the string can be converted to interger 
+String.isInteger(): Boolean // == if the string can be converted to integer 
 
 String.isFloat(): Boolean // == if the string can be converted to float 
 ```
