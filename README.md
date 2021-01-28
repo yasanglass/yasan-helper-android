@@ -80,6 +80,7 @@ The function below opens your app's page on Google Play Store
 WebHelper.openAppOnPlayStore(context: Context) 
 ```
 The function above also set your app's package name as the referrer
+
 ---
 
 ## Including in your project
