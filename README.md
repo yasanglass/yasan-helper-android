@@ -3,6 +3,43 @@
 
 A simple Android library with useful [Kotlin extension] functions to help you write less code.
 
+## Usage
+AppHelper.kt == *General helper functions*
+
+You can also use these functions using `AppHelper` object
+```kotlin
+String.isInteger(): Boolean // == if the string can be converted to interger 
+
+String.isFloat(): Boolean // == if the string can be converted to float 
+```
+The toast functions below convert the sent object into a String (unless its already a String), toast it & then return the toasted String
+```kotlin
+Context.toast(message: Any): String
+
+Context.toastLong(message: Any): String
+
+Any.toast(context: Context): String
+
+Any.toastLong(context: Context): String
+
+```
+
+NavigationHelper.kt == *Navigation helper functions*
+
+You can also use these functions using `NavigationHelper` object.
+```kotlin
+Context.startIntentAndClearHistory(intent: Intent) // starts an activity and clears the history
+```
+
+ResourcesHelper.kt == *Resources helper functions*
+
+You can also use these functions using `ResourcesHelper` object. These functions use `ContextCompat` but you dont have to manually pass `Context`.
+```kotlin
+fun Context.getColorWithContext(resourceId: Int): Int 
+
+fun Context.getDrawableWithContext(resourceId: Int): Drawable?
+```
+
 ## Including in your project
 This library is available via JitPack, so getting it as simple as adding it as a dependency, like this:
 
