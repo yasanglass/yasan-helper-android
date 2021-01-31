@@ -24,18 +24,6 @@ fun String.isFloat() = AppHelper.isFloat(this)
 
 // Toast
 
-fun Context.toast(message: Any): String {
-    val messageString = message.toString()
-    AppHelper.toast(this, messageString)
-    return messageString
-}
-
-fun Context.toastLong(message: Any): String {
-    val messageString = message.toString()
-    AppHelper.toast(this, messageString, true)
-    return messageString
-}
-
 fun Context.toast(message: String): String {
     AppHelper.toast(this, message)
     return message
@@ -54,16 +42,4 @@ fun String.toast(context: Context): String {
 fun String.toastLong(context: Context): String {
     AppHelper.toast(context, this, true)
     return this
-}
-
-fun Any.toast(context: Context): String {
-    val messageString = this.toString()
-    AppHelper.toast(context, messageString)
-    return messageString
-}
-
-fun Any.toastLong(context: Context): String {
-    val messageString = this.toString()
-    AppHelper.toast(context, messageString, true)
-    return messageString
 }

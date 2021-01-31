@@ -10,17 +10,10 @@ A simple Android library with useful [Kotlin extension] functions to help you wr
 String.isInteger(): Boolean // == if the string can be converted to integer 
 
 String.isFloat(): Boolean // == if the string can be converted to float 
-```
-The toast functions below convert the sent object into a String (unless its already a String), toast it & then return the toasted String
-```kotlin
+
 Context.toast(message: Any): String
 
 Context.toastLong(message: Any): String
-
-Any.toast(context: Context): String
-
-Any.toastLong(context: Context): String
-
 ```
 You can also use these functions using `AppHelper` object
 
