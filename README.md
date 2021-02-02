@@ -7,13 +7,19 @@ A simple Android library with useful [Kotlin extension] functions to help you wr
 **General app helper functions**
 
 ```kotlin
-String.isInteger(): Boolean // == if the string can be converted to integer 
+String.isInteger(): Boolean // == if the string can be converted to Int 
 
-String.isFloat(): Boolean // == if the string can be converted to float 
+String.isLong(): Boolean // == if the string can be converted to Long 
+
+String.isFloat(): Boolean // == if the string can be converted to Float 
+
+String.isDouble(): Boolean // == if the string can be converted to Double 
 
 Context.toast(message: Any): String
 
 Context.toastLong(message: Any): String
+
+View.clearOnClickListener()
 ```
 You can also use these functions using `AppHelper` object
 
