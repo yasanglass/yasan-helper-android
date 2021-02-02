@@ -1,7 +1,7 @@
 # YASAN Helper: Android
 [![](https://jitpack.io/v/yasandev/yasan-helper-android.svg)](https://jitpack.io/#yasandev/yasan-helper-android)  [![Build Status](https://travis-ci.com/yasandev/yasan-helper-android.svg?branch=main)](https://travis-ci.com/yasandev/yasan-helper-android) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/0bfa8066cad64933857ec1b12097a712)](https://www.codacy.com/gh/yasandev/yasan-helper-android/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=yasandev/yasan-helper-android&amp;utm_campaign=Badge_Grade)
 
-A simple Android library with useful [Kotlin extension] functions to help you write less code.
+A simple Android library with useful (Kotlin extension) functions to help you write less code.
 
 ## Usage
 **General app helper functions**
@@ -81,7 +81,7 @@ The function above also set your app's package name as the referrer
 ## Including in your project
 This library is available via JitPack, so getting it as simple as adding it as a dependency, like this:
 
-1. Add JitPack repository to your project `build.gradle` file:
+1.  Add JitPack repository to your project `build.gradle` file:
 ```gradle
 allprojects {
     repositories {
@@ -89,7 +89,7 @@ allprojects {
     }
 }
 ```
-2. Add the dependency to your module `build.gradle` file:
+2.  Add the dependency to your module `build.gradle` file:
 ```gradle
 dependencies {
     implementation 'com.github.yasandev:yasan-helper-android:{latest version}'
