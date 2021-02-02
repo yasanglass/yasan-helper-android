@@ -16,6 +16,9 @@ object AppHelper {
         Toast.makeText(context, message, length).show()
     }
 
+    // OnClick Listener
+
+    fun clearOnClickListener(view: View) = view.setOnClickListener { }
 }
 
 fun String.isInteger() = AppHelper.isInteger(this)
@@ -43,3 +46,7 @@ fun String.toastLong(context: Context): String {
     AppHelper.toast(context, this, true)
     return this
 }
+
+// OnClick Listener
+
+fun View.clearOnClickListener() = setOnClickListener { }
