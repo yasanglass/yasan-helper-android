@@ -1,6 +1,7 @@
 package dev.yasan.helper.library
 
 import android.content.Context
+import android.view.View
 import android.widget.Toast
 
 object AppHelper {
@@ -8,6 +9,10 @@ object AppHelper {
     fun isInteger(str: String?) = str?.toIntOrNull()?.let { true } ?: false
 
     fun isFloat(str: String?) = str?.toFloatOrNull()?.let { true } ?: false
+
+    fun isLong(str: String?) = str?.toLongOrNull()?.let { true } ?: false
+
+    fun isDouble(str: String?) = str?.toDoubleOrNull()?.let { true } ?: false
 
     // Toast
 
@@ -21,9 +26,14 @@ object AppHelper {
     fun clearOnClickListener(view: View) = view.setOnClickListener { }
 }
 
+
 fun String.isInteger() = AppHelper.isInteger(this)
 
 fun String.isFloat() = AppHelper.isFloat(this)
+
+fun String.isLong() = AppHelper.isLong(this)
+
+fun String.isDouble() = AppHelper.isDouble(this)
 
 // Toast
 
