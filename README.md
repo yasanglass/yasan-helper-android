@@ -1,5 +1,5 @@
 # YASAN Helper: Android
-[![](https://jitpack.io/v/yasandev/yasan-helper-android.svg)](https://jitpack.io/#yasandev/yasan-helper-android)  [![Build Status](https://travis-ci.com/yasandev/yasan-helper-android.svg?branch=main)](https://travis-ci.com/yasandev/yasan-helper-android)
+[![](https://jitpack.io/v/yasandev/yasan-helper-android.svg)](https://jitpack.io/#yasandev/yasan-helper-android)  [![Build Status](https://travis-ci.com/yasandev/yasan-helper-android.svg?branch=main)](https://travis-ci.com/yasandev/yasan-helper-android) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/0bfa8066cad64933857ec1b12097a712)](https://www.codacy.com/gh/yasandev/yasan-helper-android/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=yasandev/yasan-helper-android&amp;utm_campaign=Badge_Grade)
 
 A simple Android library with useful [Kotlin extension] functions to help you write less code.
 
