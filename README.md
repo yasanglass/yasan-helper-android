@@ -15,10 +15,6 @@ String.isFloat(): Boolean // == if the string can be converted to Float
 
 String.isDouble(): Boolean // == if the string can be converted to Double 
 
-Context.toast(message: Any): String
-
-Context.toastLong(message: Any): String
-
 View.clearOnClickListener()
 ```
 You can also use these functions using `AppHelper` object

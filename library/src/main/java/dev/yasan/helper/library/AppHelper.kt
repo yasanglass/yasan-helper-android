@@ -1,62 +1,68 @@
 package dev.yasan.helper.library
 
-import android.content.Context
 import android.view.View
-import android.widget.Toast
 
+/**
+ * A helper class with a set of functions that help with general difficulties in Android applications.
+ * @author Yasan Ghafariyan
+ */
 object AppHelper {
 
-    fun isInteger(str: String?) = str?.toIntOrNull()?.let { true } ?: false
+    /**
+     * @return if the String can be converted to Int
+     * @author Yasan Ghafariyan
+     */
+    fun isInteger(string: String?) = string?.toIntOrNull()?.let { true } ?: false
 
-    fun isFloat(str: String?) = str?.toFloatOrNull()?.let { true } ?: false
+    /**
+     * @return if the String can be converted to Float
+     * @author Yasan Ghafariyan
+     */
+    fun isFloat(string: String?) = string?.toFloatOrNull()?.let { true } ?: false
 
-    fun isLong(str: String?) = str?.toLongOrNull()?.let { true } ?: false
+    /**
+     * @return if the String can be converted to Long
+     * @author Yasan Ghafariyan
+     */
+    fun isLong(string: String?) = string?.toLongOrNull()?.let { true } ?: false
 
-    fun isDouble(str: String?) = str?.toDoubleOrNull()?.let { true } ?: false
+    /**
+     * @return if the String can be converted to Double
+     * @author Yasan Ghafariyan
+     */
+    fun isDouble(string: String?) = string?.toDoubleOrNull()?.let { true } ?: false
 
-    // Toast
-
-    fun toast(context: Context, message: String, lengthLong: Boolean = false) {
-        val length = if (lengthLong) Toast.LENGTH_LONG else Toast.LENGTH_SHORT
-        Toast.makeText(context, message, length).show()
-    }
-
-    // OnClick Listener
-
+    /**
+     * Clear previously set OnClickListener on the view
+     */
     fun clearOnClickListener(view: View) = view.setOnClickListener { }
 }
 
-
+/**
+ * @return if the String can be converted to Int
+ * @author Yasan Ghafariyan
+ */
 fun String.isInteger() = AppHelper.isInteger(this)
 
+/**
+ * @return if the String can be converted to Float
+ * @author Yasan Ghafariyan
+ */
 fun String.isFloat() = AppHelper.isFloat(this)
 
+/**
+ * @return if the String can be converted to Long
+ * @author Yasan Ghafariyan
+ */
 fun String.isLong() = AppHelper.isLong(this)
 
+/**
+ * @return if the String can be converted to Double
+ * @author Yasan Ghafariyan
+ */
 fun String.isDouble() = AppHelper.isDouble(this)
 
-// Toast
-
-fun Context.toast(message: String): String {
-    AppHelper.toast(this, message)
-    return message
-}
-
-fun Context.toastLong(message: String): String {
-    AppHelper.toast(this, message, true)
-    return message
-}
-
-fun String.toast(context: Context): String {
-    AppHelper.toast(context, this)
-    return this
-}
-
-fun String.toastLong(context: Context): String {
-    AppHelper.toast(context, this, true)
-    return this
-}
-
-// OnClick Listener
-
+/**
+ * Clear previously set OnClickListener on the view
+ */
 fun View.clearOnClickListener() = setOnClickListener { }
