@@ -34,6 +34,7 @@ object AppHelper {
 
     /**
      * Clear previously set OnClickListener on the view
+     * @author Yasan Ghafariyan
      */
     fun clearOnClickListener(view: View) = view.setOnClickListener { }
 }
@@ -64,5 +65,6 @@ fun String.isDouble() = AppHelper.isDouble(this)
 
 /**
  * Clear previously set OnClickListener on the view
+ * @author Yasan Ghafariyan
  */
 fun View.clearOnClickListener() = setOnClickListener { }
