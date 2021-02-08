@@ -7,6 +7,8 @@ A simple Android library with useful (Kotlin extension) functions to help you wr
 **General app helper functions**
 
 ```kotlin
+String.isNumeric(): Boolean // == if the String is numeric
+
 String.isInteger(): Boolean // == if the string can be converted to Int 
 
 String.isLong(): Boolean // == if the string can be converted to Long 
