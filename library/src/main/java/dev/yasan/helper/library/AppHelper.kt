@@ -33,6 +33,14 @@ object AppHelper {
     fun isDouble(string: String?) = string?.toDoubleOrNull()?.let { true } ?: false
 
     /**
+     * @return if the String is numeric
+     * @author Yasan Ghafariyan
+     */
+    fun isNumeric(string: String?): Boolean {
+        return string?.matches("-?\\d+(\\.\\d+)?".toRegex()) ?: false
+    }
+
+    /**
      * Clear previously set OnClickListener on the view
      * @author Yasan Ghafariyan
      */
@@ -62,6 +70,12 @@ fun String.isLong() = AppHelper.isLong(this)
  * @author Yasan Ghafariyan
  */
 fun String.isDouble() = AppHelper.isDouble(this)
+
+/**
+ * @return if the String is numeric
+ * @author Yasan Ghafariyan
+ */
+fun String.isNumeric() = AppHelper.isNumeric(this)
 
 /**
  * Clear previously set OnClickListener on the view
