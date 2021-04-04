@@ -1,7 +1,10 @@
 package dev.yasan.helper.library
 
+import android.app.Activity
+import android.content.Context.INPUT_METHOD_SERVICE
 import android.view.Gravity
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.FrameLayout
 import com.google.android.material.snackbar.Snackbar
 
@@ -39,21 +42,55 @@ object ViewHelper {
      * @return set the view's visibility to [View.VISIBLE]
      * @author Yasan Ghafariyan
      */
-    fun visible(view: View) { view.visibility = View.VISIBLE }
+    fun visible(view: View) {
+        view.visibility = View.VISIBLE
+    }
 
     /**
      * @return set the view's visibility to [View.INVISIBLE]
      * @author Yasan Ghafariyan
      */
-    fun invisible(view: View) { view.visibility = View.INVISIBLE }
+    fun invisible(view: View) {
+        view.visibility = View.INVISIBLE
+    }
 
     /**
      * @return set the view's visibility to [View.GONE]
      * @author Yasan Ghafariyan
      */
-    fun gone(view: View) { view.visibility = View.GONE }
+    fun gone(view: View) {
+        view.visibility = View.GONE
+    }
+
+    /**
+     * Closes the keyboard if its showing.
+     *
+     * @return If it closed the keyboard or it was not showing.
+     * @author Yasan Ghafariyan
+     */
+    fun closeKeyboard(activity: Activity): Boolean {
+        return try {
+            val inputManager = activity.getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+            inputManager.hideSoftInputFromWindow(
+                activity.currentFocus!!.windowToken,
+                InputMethodManager.HIDE_NOT_ALWAYS
+            )
+            true
+        } catch (e: NullPointerException) {
+            e.printStackTrace()
+            false
+        }
+    }
 
 }
+
+/**
+ * Closes the keyboard if its showing.
+ *
+ * @return If it closed the keyboard or it was not showing.
+ * @author Yasan Ghafariyan
+ */
+fun Activity.closeKeyboard() = ViewHelper.closeKeyboard(this)
 
 /**
  * Shows a SnackBar on the bottom of the screen
