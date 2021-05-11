@@ -82,7 +82,8 @@ object WebHelper {
  *
  * @author Yasan Ghafariyan
  */
-fun Context.openAppOnPlayStore() = WebHelper.openAppOnPlayStore(this)
+fun Context.openAppOnPlayStore(packageName: String? = null) =
+    WebHelper.openAppOnPlayStore(this, packageName)
 
 /**
  * Opens the URL in a web view. It also sets the app's package name as the referrer.
