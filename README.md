@@ -63,22 +63,33 @@ fun String.showSnackBar(parent: View)
 fun View.showSnackBarOnTop(message: String) 
 
 fun String.showSnackBarOnTop(parent: View)
+
+fun Activity.closeKeyboard()
 ```
 You can also use these functions using `ViewHelper` object
 
 ---
 **Web helper functions**
-The function below opens the url in a webview
 ```kotlin
-WebHelper.openWebView(context: Context, url: String?) 
+Context.openWebView(url: String?) // Opens the url in a WebView.
 ```
-The function below opens your app's page on Google Play Store
 ```kotlin
-WebHelper.openAppOnPlayStore(context: Context) 
+// Opens an app's Play Store page. Opens the current app if `packageName` is null.
+WebHelper.openAppOnPlayStore(packageName: String? = null)
 ```
-The function above also set your app's package name as the referrer
+```kotlin
+String.isURL() // Checks if the string is a valid URL or not using Regex.
+```
+You can also use these functions using `WebHelper` object
 
 ---
+**Clipboard helper functions**
+```kotlin
+// Copies the string to the clipboard and runs onSuccess if its succeeds.
+Context.copyToClipboard(string: String, onSuccess: () -> Unit = {})
+```
+You can also use these functions using `ClipboardHelper` object
+
 
 ## Including in your project
 This library is available via JitPack, so getting it as simple as adding it as a dependency, like this:
