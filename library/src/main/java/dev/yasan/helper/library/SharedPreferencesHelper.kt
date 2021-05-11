@@ -2,8 +2,6 @@ package dev.yasan.helper.library
 
 import android.content.Context
 import android.content.SharedPreferences
-import dev.yasan.helper.library.WebHelper.PLAY_STORE_APP_LINK_PREFIX
-import dev.yasan.helper.library.WebHelper.openWebView
 
 /**
  * A helper class with a set of functions that help with SharedPreferences related difficulties in Android applications.
