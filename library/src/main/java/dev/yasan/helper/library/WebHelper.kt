@@ -5,9 +5,12 @@ import android.content.Intent
 import android.net.Uri
 import android.util.Log
 import androidx.browser.customtabs.CustomTabsIntent
+import androidx.core.content.ContextCompat
 import dev.yasan.helper.library.WebHelper.PLAY_STORE_APP_LINK_PREFIX
 import dev.yasan.helper.library.WebHelper.openWebView
 import java.util.regex.Pattern
+import androidx.core.content.ContextCompat.startActivity
+
 
 /**
  * A helper class with a set of functions that help with web related difficulties in Android applications.
@@ -32,15 +35,26 @@ object WebHelper {
      *
      * @author Yasan Ghafariyan
      */
-    fun openWebView(context: Context, url: String) {
-        val builder: CustomTabsIntent.Builder = CustomTabsIntent.Builder()
-        val intent: CustomTabsIntent = builder.build()
-        intent.intent.putExtra(
-            Intent.EXTRA_REFERRER,
-            Uri.parse(APP_REF_PREFIX + context.packageName)
-        )
-        intent.intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
-        intent.launchUrl(context, Uri.parse(url))
+    fun openWebView(context: Context, url: String): Boolean {
+        try {
+            val builder: CustomTabsIntent.Builder = CustomTabsIntent.Builder()
+            val intent: CustomTabsIntent = builder.build()
+            intent.intent.putExtra(
+                Intent.EXTRA_REFERRER,
+                Uri.parse(APP_REF_PREFIX + context.packageName)
+            )
+            intent.intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+            intent.launchUrl(context, Uri.parse(url))
+            return true
+        } catch (e: Exception) {
+            return try {
+                val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+                context.startActivity(browserIntent)
+                true
+            } catch (e: Exception) {
+                false
+            }
+        }
     }
 
     /**
@@ -54,12 +68,11 @@ object WebHelper {
      *
      * @author Yasan Ghafariyan
      */
-    fun openAppOnPlayStore(context: Context, packageName: String? = null) {
+    fun openAppOnPlayStore(context: Context, packageName: String? = null) =
         openWebView(
             context,
             PLAY_STORE_APP_LINK_PREFIX + (packageName ?: context.packageName)
         )
-    }
 
     /**
      * Checks if the string is a valid URL or not.
